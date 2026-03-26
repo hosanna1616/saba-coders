@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Magnetic } from "./motion";
-
+import ShuffleText from "./ShuffleText";
 export function Header() {
   const [isDark, setIsDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -136,15 +136,17 @@ export function Header() {
               className="flex items-center gap-3 text-base font-medium tracking-tight hover:opacity-70 transition-opacity duration-300"
               onClick={() => setMenuOpen(false)}
             >
-              <Image
-                src="/images/logo.png"
-                alt="Saba Coders logo"
-                width={56}
-                height={56}
-                className="opacity-70 pointer-events-none"
-                priority
-              />
-              <span>SABA CODERS</span>
+              <div className="inline-block p-1 rounded-full dark:bg-white/9">
+                <Image
+                  src="/logo.svg"
+                  alt="Saba Coders logo"
+                  width={196}
+                  height={86}
+                  className="opacity-90 pointer-events-none"
+                  priority
+                />
+              </div>
+              {/* <span>SABA CODERS</span> */}
             </Link>
           </Magnetic>
 
@@ -304,7 +306,7 @@ export function Header() {
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
                   onClick={() => setMenuOpen(false)}
                 >
-                 SABA CODERS
+                  SABA CODERS
                 </Link>
               </motion.div>
             </div>
