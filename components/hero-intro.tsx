@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
-
+import LiquidEther from "./LiquidEther";
 export function HeroIntro() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -122,32 +122,26 @@ export function HeroIntro() {
       className="relative h-[140vh] overflow-hidden"
     >
       {/* Hero Image with Parallax */}
-      <motion.div
-        className="absolute inset-0 w-full h-full"
-        style={{ y: imageY, scale: imageScale }}
-      >
-        <motion.div
-          variants={imageRevealVariants}
-          initial="hidden"
-          animate={isLoaded ? "visible" : "hidden"}
-          className="absolute inset-0"
-        >
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="Hero background"
-            fill
-            className="object-cover"
-            priority
-            quality={90}
-          />
-          {/* Gradient overlays for depth */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/30 to-background" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
-          {/* Vignette effect */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(0,0,0,0.4)_100%)]" />
-        </motion.div>
-      </motion.div>
-
+      {/* Liquid Ether Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <LiquidEther
+          colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+          mouseForce={20}
+          cursorSize={120}
+          isViscous
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo
+          autoSpeed={0.5}
+          autoIntensity={2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />
+      </div>
       {/* Content */}
       <motion.div
         className="relative z-10 h-screen flex flex-col items-center justify-center px-6"
