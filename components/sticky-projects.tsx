@@ -27,7 +27,7 @@ const projects = [
     title: "Digital Pet Twin",
     description:
       "Developed in collaboration with an agile and imaginative team lead by me, it responds dynamically to real-world weather conditions, invites users into playful, interactive games, and builds a sense of connection through nuanced, evolving interactions.This project earned 1st place honors at the GIG Hackathon 2025, recognized for its originality, technical sophistication, and experience-first design. Blending creativity with engineering precision, Digital Pet Twin showcases the future of interactive digital relationships and the kind of teamwork that turns bold ideas into tangible wins.",
-    link: "#",
+    link: "https://pettwin3.vercel.app/",
     image: "/images/BG2.png",
     bgColor: "from-amber-900/20 via-orange-900/60 to-background",
   },
