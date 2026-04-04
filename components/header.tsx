@@ -128,7 +128,7 @@ export function Header() {
             : ""
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-7 flex items-center justify-between">
           {/* Logo */}
           <Magnetic strength={0.2}>
             <Link
@@ -136,13 +136,13 @@ export function Header() {
               className="flex items-center gap-3 text-base font-medium tracking-tight hover:opacity-70 transition-opacity duration-300"
               onClick={() => setMenuOpen(false)}
             >
-              <div className="inline-block p-1 rounded-full dark:bg-white/9">
+              <div className="inline-block rounded-full dark:bg-white/9 p-3">
                 <Image
                   src="/logo.svg"
                   alt="Saba Coders logo"
                   width={196}
-                  height={86}
-                  className="opacity-90 pointer-events-none"
+                  height={286}
+                  className="h-9 w-auto opacity-90 pointer-events-none sm:h-17"
                   priority
                 />
               </div>
