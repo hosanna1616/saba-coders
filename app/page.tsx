@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { HeroIntro } from "@/components/hero-intro"
 import { ServicesMarquee } from "@/components/services-marquee"
 import { About } from "@/components/about"
+import { MeetTeam } from "@/components/meet-team"
 import { StickyProjects } from "@/components/sticky-projects"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -25,6 +26,7 @@ export default function Home() {
           <HeroIntro />
           <ServicesMarquee />
           <About />
+          <MeetTeam />
           <StickyProjects />
           <Contact />
           <Footer />

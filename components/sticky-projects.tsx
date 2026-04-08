@@ -31,18 +31,6 @@ const projects = [
     image: "/images/BG2.png",
     bgColor: "from-amber-900/20 via-orange-900/60 to-background",
   },
-  // {
-  //   id: 3,
-  //   number: "03",
-  //   category: "ECOMMERCE WEBSITE",
-  //   tech: "NEXT JS  |  LENIS  |  GSAP",
-  //   title: "Lux Cells",
-  //   description:
-  //     "Lux Cells is a mobile phone store offering a wide range of smartphones and accessories, providing quality products and dependable customer service.",
-  //   link: "#",
-  //   image: "/images/project-03.jpg",
-  //   bgColor: "from-emerald-900/40 via-teal-900/60 to-background",
-  // },
 ];
 
 function ProjectSlide({ 
